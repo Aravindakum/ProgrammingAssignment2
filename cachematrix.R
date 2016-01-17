@@ -79,6 +79,13 @@ client <- function()
 {
   A <- matrix( c ( 1, 2, 2, 1 ), nrow=2, byrow=TRUE)
   cacheMatrix<-makeCacheMatrix(A)
+  print(cacheMatrix$get())
+  cacheSolve(cacheMatrix)
+  
+  B <- matrix( c ( 3, 4, 4, 5 ), nrow=2, byrow=TRUE)
+  cacheMatrix$set(B)
+  print(cacheMatrix$get())
   cacheSolve(cacheMatrix)
 }
+
 
